@@ -41,48 +41,64 @@
 - **Edge-to-Edge**: Immersive full-screen experience that adapts to your device
 - **Responsive Layout**: Optimized for all Android screen sizes from phones to tablets
 
+## Usage
+
+### Basic Chat
+
+1. **Start a New Chat**: Tap the menu icon (☰) to open the sidebar, then tap "New Chat"
+2. **Send Messages**: Type your message in the input field and tap send (or press Enter)
+3. **View Responses**: Responses stream in real-time as the AI generates them
+
+### Advanced Features
+
+#### Brain Toggle (💡)
+Toggle the lightbulb icon to enable/disable:
+- **Enabled**: AI can use reasoning mode (shows thinking process) and web search tools
+- **Disabled**: Standard chat mode without tools or reasoning
+
+#### Model Selection
+- Tap the model name in the input bar to see available models
+- Select a different model for each chat session
+- Your model preference is saved automatically
+
+#### Multiple Chats
+- Swipe right or tap the menu icon (☰) to access your chat list
+- Tap any chat to resume the conversation
+- Long-press a chat to delete it
+- Use "Delete All" in settings to clear all chats
+
+#### Themes
+- Access settings via the gear icon
+- Choose between **Space** (near-black, default) and **Dark** (grey) themes
+- Theme preference is saved automatically
+
+See [SETUP.md](SETUP.md) for more detailed usage instructions.
+
 ## Screenshots
 
 <div align="center">
 
 ### Main Chat with Reasoning Mode
-<img src="docs/screenshots/1.png" alt="Main chat interface with reasoning mode" width="300"/>
+<img src="docs/screenshots/1.jpeg" alt="Main chat interface with reasoning mode" width="300"/>
 
 *The main chat interface showing reasoning mode in action with the Thought indicator*
 
 ### Chat List & Navigation
-<img src="docs/screenshots/2.png" alt="Chat list sidebar" width="300"/>
+<img src="docs/screenshots/2.jpeg" alt="Chat list sidebar" width="300"/>
 
 *Multiple chat sessions accessible via the sidebar with search functionality*
 
 ### Settings & Configuration
-<img src="docs/screenshots/3.png" alt="Settings screen" width="300"/>
+<img src="docs/screenshots/3.jpeg" alt="Settings screen" width="300"/>
 
 *Server configuration (Ollama and SearXNG) and theme selection*
 
 ### Web Search with Reasoning
-<img src="docs/screenshots/4.png" alt="Web search tool with reasoning mode" width="300"/>
+<img src="docs/screenshots/4.jpeg" alt="Web search tool with reasoning mode" width="300"/>
 
 *Web search integration via SearXNG combined with reasoning mode showing current information*
 
 </div>
-
-**Screenshot Specifications:**
-- **Format**: PNG or JPG
-- **Dimensions**: 1080x2400 pixels (9:20 aspect ratio) or similar standard Android resolutions
-- **Device Frame**: Optional - can use device frames for a more polished look, but plain screenshots work fine
-- **File Naming**: 
-  - `1.png` - Main chat interface with reasoning mode (Thought indicator visible)
-  - `2.png` - Chat list/sidebar showing multiple conversations
-  - `3.png` - Settings screen with server IP and ports configured
-  - `4.png` - Chat showing web search tool execution with reasoning mode
-- **Location**: Place all screenshots in `docs/screenshots/` directory
-- **Content Recommendations**:
-  - Use realistic conversations (not placeholder "Hello, world!")
-  - Show both Space and Dark themes (mix them across screenshots)
-  - Include examples with markdown formatting (code blocks, lists)
-  - Show the streaming indicator when appropriate
-  - Keep UI elements visible and not obscured
 
 ## Requirements
 
@@ -168,39 +184,6 @@ The APK will be located at `app/build/outputs/apk/debug/app-debug.apk`.
 3. Navigate to the `localgrok` directory
 4. Wait for Gradle sync to complete
 5. Run the app with **Shift+F10** or the Run button
-
-## Usage
-
-### Basic Chat
-
-1. **Start a New Chat**: Tap the menu icon (☰) to open the sidebar, then tap "New Chat"
-2. **Send Messages**: Type your message in the input field and tap send (or press Enter)
-3. **View Responses**: Responses stream in real-time as the AI generates them
-
-### Advanced Features
-
-#### Brain Toggle (💡)
-Toggle the lightbulb icon to enable/disable:
-- **Enabled**: AI can use reasoning mode (shows thinking process) and web search tools
-- **Disabled**: Standard chat mode without tools or reasoning
-
-#### Model Selection
-- Tap the model name in the input bar to see available models
-- Select a different model for each chat session
-- Your model preference is saved automatically
-
-#### Multiple Chats
-- Swipe right or tap the menu icon (☰) to access your chat list
-- Tap any chat to resume the conversation
-- Long-press a chat to delete it
-- Use "Delete All" in settings to clear all chats
-
-#### Themes
-- Access settings via the gear icon
-- Choose between **Space** (near-black, default) and **Dark** (grey) themes
-- Theme preference is saved automatically
-
-See [SETUP.md](SETUP.md) for more detailed usage instructions.
 
 ## Documentation
 
