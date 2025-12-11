@@ -78,13 +78,7 @@ See [SETUP.md](SETUP.md) for more detailed usage instructions.
 
 <div align="center">
 
-<img src="docs/screenshots/1.jpeg" alt="Main chat interface with reasoning mode" width="200"/> <img src="docs/screenshots/2.jpeg" alt="Chat list sidebar" width="200"/>
-
-*Main chat with reasoning mode* | *Chat list & navigation*
-
-<img src="docs/screenshots/3.jpeg" alt="Settings screen" width="200"/> <img src="docs/screenshots/4.jpeg" alt="Web search tool with reasoning mode" width="200"/>
-
-*Settings & configuration* | *Web search with reasoning*
+<img src="docs/screenshots/1.jpeg" alt="Main chat interface with reasoning mode" width="180"/> <img src="docs/screenshots/2.jpeg" alt="Chat list sidebar" width="180"/> <img src="docs/screenshots/3.jpeg" alt="Settings screen" width="180"/> <img src="docs/screenshots/4.jpeg" alt="Web search tool with reasoning mode" width="180"/>
 
 </div>
 
