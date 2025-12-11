@@ -78,25 +78,13 @@ See [SETUP.md](SETUP.md) for more detailed usage instructions.
 
 <div align="center">
 
-### Main Chat with Reasoning Mode
-<img src="docs/screenshots/1.jpeg" alt="Main chat interface with reasoning mode" width="300"/>
+<img src="docs/screenshots/1.jpeg" alt="Main chat interface with reasoning mode" width="200"/> <img src="docs/screenshots/2.jpeg" alt="Chat list sidebar" width="200"/>
 
-*The main chat interface showing reasoning mode in action with the Thought indicator*
+*Main chat with reasoning mode* | *Chat list & navigation*
 
-### Chat List & Navigation
-<img src="docs/screenshots/2.jpeg" alt="Chat list sidebar" width="300"/>
+<img src="docs/screenshots/3.jpeg" alt="Settings screen" width="200"/> <img src="docs/screenshots/4.jpeg" alt="Web search tool with reasoning mode" width="200"/>
 
-*Multiple chat sessions accessible via the sidebar with search functionality*
-
-### Settings & Configuration
-<img src="docs/screenshots/3.jpeg" alt="Settings screen" width="300"/>
-
-*Server configuration (Ollama and SearXNG) and theme selection*
-
-### Web Search with Reasoning
-<img src="docs/screenshots/4.jpeg" alt="Web search tool with reasoning mode" width="300"/>
-
-*Web search integration via SearXNG combined with reasoning mode showing current information*
+*Settings & configuration* | *Web search with reasoning*
 
 </div>
 
