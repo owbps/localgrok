@@ -479,39 +479,42 @@ class ChatRepository(
         val startIndex = response.indexOf(TOOL_CALL_PREFIX)
         if (startIndex == -1) return null
         val afterTagIndex = startIndex + TOOL_CALL_PREFIX.length
-        
+
         // Grab everything after <tool_call>, optionally stopping at </tool_call>
         val trailing = response.substring(afterTagIndex)
         val endIndex = trailing.indexOf("</tool_call>")
         val inner = if (endIndex != -1) trailing.substring(0, endIndex) else trailing
-        
+
         // Find the first balanced JSON object within the inner string
         val jsonStart = inner.indexOf('{')
         if (jsonStart == -1) return null
-        
+
         var depth = 0
         var jsonEnd = -1
         var inString = false
         var escapeNext = false
-        
+
         for (i in jsonStart until inner.length) {
             val char = inner[i]
-            
+
             if (escapeNext) {
                 escapeNext = false
                 continue
             }
-            
+
             when (char) {
                 '\\' -> {
                     escapeNext = true
                 }
+
                 '"' -> {
                     inString = !inString
                 }
+
                 '{' -> {
                     if (!inString) depth++
                 }
+
                 '}' -> {
                     if (!inString) {
                         depth--
@@ -523,17 +526,17 @@ class ChatRepository(
                 }
             }
         }
-        
+
         val jsonString = if (jsonEnd != -1) {
             inner.substring(jsonStart, jsonEnd + 1)
         } else {
             // Fallback: take the rest of the string if no closing brace yet (streaming)
             inner.substring(jsonStart)
         }
-        
+
         return parseJsonPayload(jsonString)
     }
-    
+
     /**
      * Parse JSON payload string into ToolCallPayload
      */

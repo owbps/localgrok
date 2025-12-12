@@ -8,32 +8,36 @@ import java.util.Locale
  * Builder for generating system prompts based on tool availability
  */
 object SystemPromptBuilder {
-    
+
     /**
      * Builds a system prompt based on whether tools are enabled
-     * 
+     *
      * @param isToolsEnabled Whether tools (web search, datetime) are enabled
      * @return The formatted system prompt string
      */
     fun buildSystemPrompt(isToolsEnabled: Boolean): String {
         val calendar = Calendar.getInstance()
-        
+
         // Generate full datetime string: "Wednesday, December 10, 2025 at 3:30 PM"
-        val fullDateTimeFormat = SimpleDateFormat("EEEE, MMMM d, yyyy 'at' h:mm a", Locale.getDefault())
+        val fullDateTimeFormat =
+            SimpleDateFormat("EEEE, MMMM d, yyyy 'at' h:mm a", Locale.getDefault())
         val currentFullDateTime = fullDateTimeFormat.format(calendar.time)
-        
+
         // Generate time-only string: "3:30 PM"
         val timeOnlyFormat = SimpleDateFormat("h:mm a", Locale.getDefault())
         val currentTimeOnly = timeOnlyFormat.format(calendar.time)
-        
+
         return if (isToolsEnabled) {
             buildToolsEnabledPrompt(currentFullDateTime, currentTimeOnly)
         } else {
             buildToolsDisabledPrompt(currentTimeOnly)
         }
     }
-    
-    private fun buildToolsEnabledPrompt(currentFullDateTime: String, currentTimeOnly: String): String {
+
+    private fun buildToolsEnabledPrompt(
+        currentFullDateTime: String,
+        currentTimeOnly: String
+    ): String {
         return """### SYSTEM STATUS: [ONLINE] - TOOLS ENABLED
 
 ATTENTION: The user has just toggled your capabilities to ACTIVE.
@@ -115,7 +119,7 @@ User: Tell me the current date and today's top news.
 Assistant: <tool_call>{"name":"web_search","query":"top news and current date"}</tool_call>
 """
     }
-    
+
     private fun buildToolsDisabledPrompt(currentTimeOnly: String): String {
         return """### SYSTEM STATUS: [LITE MODE] - TOOLS DISABLED
 
